@@ -1,0 +1,123 @@
+.chat-main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+
+  $section-color: #38aef0;
+
+  .main-header {
+    height: 100px;
+    padding: 0 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+
+    &_left-box {
+      margin-top: 35px;
+
+      &_current-group {
+        color: #333333;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      &_member-list {
+        color: #999999;
+        font-size: 12px;
+        display: flex;
+      }
+    }
+
+    &_edit-btn {
+      color: $section-color;
+      font-size: 16px;
+      border: solid 1px $section-color;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 30px;
+      padding: 0 20px;
+
+      .edit-btn {
+        color: $section-color;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+  .messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 46px 40px;
+
+    .message {
+      padding-bottom: 40px;
+
+      &_text{
+        color: #434A54;
+        font-size: 14px;
+      }
+
+      &_upper-info {
+        display: flex;
+
+        &_taker {
+          color: #333333;
+          font-size: 16px;
+        }
+    
+        &_date {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  
+
+  .form {
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+
+    .new_message {
+      display: flex;
+
+      .input-box {
+        width: 100%;
+        position: relative;
+
+        &_text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+        }
+
+        &_image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.3rem;
+
+          &_file {
+            display: none;
+          }
+        }
+      }
+
+      .submit-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left:15px;
+        background-color: $section-color;
+        color: white;
+
+      }
+    }
+  }
+}
