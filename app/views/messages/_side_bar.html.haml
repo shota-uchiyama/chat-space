@@ -3,14 +3,16 @@
   .side-header
     .side-header_box
       %p.side-header_box_user-name
-        masa
+        = current_user.name
       %ul.side-header_box-menu
         %li.side-header_box_menu_new-group
           = link_to "#", class:"new-group" do
             = icon('fas', 'edit', class: "btn_icon")
         %li.side-header_box_menu_edit-user
-          = link_to "#", class:"edit-user" do
-            = icon('fa', 'cog', class: "btn_icon")
+          -# = link_to "#", class:"edit-user" do
+          -#   = icon('fa', 'cog', class: "btn_icon")
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
 
   .groups
     %p.group_group-name
