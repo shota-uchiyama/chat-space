@@ -27,37 +27,42 @@
         display: flex;
         justify-content: flex-end;
 
-        .new-group {
-          color: #ffffff;
+        
+        a {
+          color: white;
         }
 
-        .edit-user {
-          margin-left: 5px;
-          color: #ffffff;
-        }
+       
       }
     }
   }
 
+
   .groups {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-
-    .group_group-name {
-      font-size: 15px;
-      padding-top: 20px;
-      padding-left: 20px;
-      color: #ffffff;
-      font-weight: bold;
+    
+    .group {
+      a {
+        text-decoration: none;
+      }
     }
 
-    .group_latest-message {
-      font-size: 11px;
-      padding-top: 5px;
-      padding-left: 20px;
-      padding-bottom: 20px;
-      font-weight: bold;
-      color: #ffffff;
-    }
+     .group_group-name {
+       font-size: 15px;
+       padding-top: 20px;
+       padding-left: 20px;
+       color: #ffffff;
+       font-weight: bold;
+      }
+
+     .group_latest-message {
+       font-size: 11px;
+       padding-top: 5px;
+       padding-left: 20px;
+       padding-bottom: 20px;
+       font-weight: bold;
+       color: #ffffff;
+      }
   }
 }
