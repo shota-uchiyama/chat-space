@@ -48,6 +48,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 46px 40px;
+    overflow: scroll;
 
     .message {
       padding-bottom: 40px;
@@ -86,6 +87,10 @@
       .input-box {
         width: 100%;
         position: relative;
+        display: flex;
+        .field_with_errors {
+          width: 100%;
+        }
 
         &_text {
           height: 50px;
@@ -98,23 +103,22 @@
         &_image {
           position: absolute;
           top: 10px;
-          right: 10px;
+          right: 130px;
           font-size: 1.3rem;
 
           &_file {
             display: none;
           }
         }
-      }
-
-      .submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left:15px;
-        background-color: $section-color;
-        color: white;
-
+        .submit-btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left:15px;
+          background-color: $section-color;
+          color: white;
+  
+        }
       }
     }
   }
