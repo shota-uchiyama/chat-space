@@ -6,28 +6,17 @@
         = current_user.name
       %ul.side-header_box-menu
         %li.side-header_box_menu_new-group
-          = link_to 'groups/new' do
+          = link_to new_group_path do
             = icon('fas', 'edit', class: "btn_icon")
         %li.side-header_box_menu_edit-user
-          -# = link_to "#", class:"edit-user" do
-          -#   = icon('fa', 'cog', class: "btn_icon")
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
 
   .groups
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group_group-name
             = group.name
           .group_latest-message
             メッセージはまだありません。
-    -# %p.group_group-name
-    -#   techcamp
-    -# %p.group_latest-message
-    -#   まだメッセージがありません
-
-    -# %p.group_group-name
-    -#   techcamp
-    -# %p.group_latest-message
-    -#   まだメッセージがありません
