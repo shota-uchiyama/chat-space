@@ -2,37 +2,39 @@
   .main-header
     .main-header_left-box
       %h2.main-header_left-box_current-group
-        test
+        = @group.name
       %ul.main-header_left-box_member-list
-        Member : 
+        Member:
         %li.main-header_left-box_member-list_member
-          masa
-  
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
+
     .main-header_edit-btn
-      -# = link_to edit_group_path(@group), class:"edit-btn" do
-      = link_to "#", class:"edit-btn" do
+      = link_to edit_group_path(@group), class:"edit-btn" do
+        Edit
+      -# = link_to "#", class:"edit-btn" do
         Edit
 
   .messages
     = render @messages
 
-    .message
-      .message_upper-info
-        %p.message_upper-info_taker
-          masa
-        %p.message_upper-info_date
-          2020/04/11(Sat) 22:29
-      %p.message_text
-        おはよう！
+    -# .message
+    -#   .message_upper-info
+    -#     %p.message_upper-info_taker
+    -#       masa
+    -#     %p.message_upper-info_date
+    -#       2020/04/11(Sat) 22:29
+    -#   %p.message_text
+    -#     おはよう！
 
-    .message
-      .message_upper-info
-        %p.message_upper-info_taker
-          masa
-        %p.message_upper-info_date
-          2020/04/11(Sat) 22:29
-      %p.message_text
-        おはよう！
+    -# .message
+    -#   .message_upper-info
+    -#     %p.message_upper-info_taker
+    -#       masa
+    -#     %p.message_upper-info_date
+    -#       2020/04/11(Sat) 22:29
+    -#   %p.message_text
+    -#     おはよう！
 
 
   -# .form
