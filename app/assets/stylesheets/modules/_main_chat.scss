@@ -39,9 +39,7 @@
         color: $section-color;
         text-decoration: none;
       }
-
     }
-
   }
 
   .messages {
@@ -60,6 +58,7 @@
 
       &_upper-info {
         display: flex;
+        margin-bottom: 10px;
 
         &_taker {
           color: #333333;
@@ -123,3 +122,4 @@
     }
   }
 }
+
